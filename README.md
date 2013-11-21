@@ -1,0 +1,4 @@
+Stack
+=====
+
+Simple stack implementation
