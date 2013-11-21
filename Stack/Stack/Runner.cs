@@ -6,28 +6,52 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    class Runner 
+    class Runner
     {
         public static void Main(string[] args)
         {
-            StackInterface<int> test = new Stack<int>(10);
+            IStack<int> stack = new Stack<int>(10);
 
-            test.Push(10);
-            test.Push(11);
-                       
-
-            Console.WriteLine(test.Peek());
-            test.Pop();
-            Console.WriteLine(test.Peek());
-            Console.ReadLine();
-            //Console.WriteLine(test.Length);
-            List<int> testLista = test.print();
-            foreach (var item in testLista)
+            for (int i = 1; i <= 10; i++)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine("Add element " + i);
+                stack.addElement(i);
+                Console.WriteLine("New length is: " + stack.getLength());
+
             }
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("View last added element " + stack.viewElement());
+                Console.WriteLine("Remove last added element " + stack.removeElement());
+                Console.WriteLine("New length is " + stack.getLength());
+
+            }
+
+            try
+            {
+                stack.viewElement();
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine("Error " + exc.Message);
+            }
+
+            try
+            {
+                stack.removeElement();
+            }
+            catch (InvalidOperationException exc)
+            {
+                Console.WriteLine("Error " + exc.Message);
+            }
+
+            Console.WriteLine("Press any key to continue ...");
             Console.ReadLine();
-          
+
+
+
         }
     }
 }
+
