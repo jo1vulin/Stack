@@ -9,6 +9,8 @@ namespace Stack
     // Generic class
     public class Stack<T> : IStack<T>
     {
+
+        #region properties
         private int capacity;
         public int Capacity
         {
@@ -19,7 +21,7 @@ namespace Stack
         private int length;
         public int Length
         {
-            get { return Index + 1; }
+            get { return length = Index + 1; }
         }
 
         private T[] elements;
@@ -35,6 +37,7 @@ namespace Stack
             get { return index; }
             set {index=value;}
         }
+        #endregion
 
         public Stack()
         {
@@ -51,7 +54,7 @@ namespace Stack
         {
             if (this.Length == Capacity)
             {
-                increaseCapacity();
+              //  increaseCapacity();
             }
             Index++;
             Elements[Index] = element;
@@ -93,6 +96,12 @@ namespace Stack
         public int getLength()
         {
             return Length;
+        }
+
+        public void clearStack()
+        {
+            Array.Clear(Elements, 0, Elements.Length);
+            Index = -1;
         }
 
         private void increaseCapacity()

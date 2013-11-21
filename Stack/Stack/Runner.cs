@@ -20,7 +20,7 @@ namespace Stack
 
             }
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Console.WriteLine("View last added element " + stack.viewElement());
                 Console.WriteLine("Remove last added element " + stack.removeElement());
@@ -44,6 +44,29 @@ namespace Stack
             catch (InvalidOperationException exc)
             {
                 Console.WriteLine("Error " + exc.Message);
+            }
+
+            // testiram clear stack, clear samo stavi nule, duzina elementa ostaje ista
+            // nisam siguran da li je clear potreban ili je dovoljno vratiti index na -1
+            stack.clearStack();
+            Console.WriteLine("Stack: " + stack.getLength());
+            var item = stack.printAllElements();
+            foreach (var i in item)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Stack: " + stack.printAllElements());
+            
+            stack.addElement(12);
+            Console.WriteLine(stack.getLength());
+            Console.WriteLine(stack.viewElement());
+
+            for (int i = 1; i <= 50; i++)
+            {
+                Console.WriteLine("Add element " + i);
+                stack.addElement(i);
+                Console.WriteLine("New length is: " + stack.getLength());
+
             }
 
             Console.WriteLine("Press any key to continue ...");

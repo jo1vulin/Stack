@@ -9,11 +9,22 @@ namespace Stack
     interface IStack<T>
     {
         
-
+        //Remove last element from stack
         T removeElement();
+
+        //View last element from stack
         T viewElement();
+
+        //Print all elements from stack
         List<T> printAllElements();
+
+        //Get length of stack
         int getLength();
+
+        //Add element to stack
         void addElement(T element);
+
+        //Clear stack
+        void clearStack();
     }
 }
