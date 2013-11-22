@@ -25,7 +25,7 @@ namespace Stack
         }
 
         private T[] elements;
-        protected T[] Elements
+        public T[] Elements
         {
             get { return elements; }
             set { elements = value; }
@@ -54,7 +54,7 @@ namespace Stack
         {
             if (this.Length == Capacity)
             {
-              //  increaseCapacity();
+              increaseCapacity();
             }
             Index++;
             Elements[Index] = element;
@@ -65,11 +65,11 @@ namespace Stack
             if (this.Length < 1)
             {
                 throw new InvalidOperationException("Stack is empty");
-            }
-            T element = Elements[Index];
+            }    
             Elements[Index] = default(T);
             Index--;
-            return element;
+            return Elements[Index];
+
         }
 
         public T viewElement()
@@ -104,6 +104,7 @@ namespace Stack
             Index = -1;
         }
 
+        //perhaps increase to more than +1
         private void increaseCapacity()
         {
             Capacity++;

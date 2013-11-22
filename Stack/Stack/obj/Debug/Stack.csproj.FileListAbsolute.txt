@@ -6,3 +6,4 @@ D:\Repos\StackRepo\Stack\Stack\bin\Debug\Stack.exe
 D:\Repos\StackRepo\Stack\Stack\bin\Debug\Stack.pdb
 D:\Repos\StackRepo\Stack\Stack\obj\Debug\Stack.exe
 D:\Repos\StackRepo\Stack\Stack\obj\Debug\Stack.pdb
+D:\Repos\StackRepo\Stack\Stack\obj\Debug\Stack.csprojResolveAssemblyReference.cache

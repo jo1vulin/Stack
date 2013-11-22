@@ -46,8 +46,7 @@ namespace Stack
                 Console.WriteLine("Error " + exc.Message);
             }
 
-            // testiram clear stack, clear samo stavi nule, duzina elementa ostaje ista
-            // nisam siguran da li je clear potreban ili je dovoljno vratiti index na -1
+            // test clear stack
             stack.clearStack();
             Console.WriteLine("Stack: " + stack.getLength());
             var item = stack.printAllElements();
@@ -68,6 +67,9 @@ namespace Stack
                 Console.WriteLine("New length is: " + stack.getLength());
 
             }
+
+            
+            
 
             Console.WriteLine("Press any key to continue ...");
             Console.ReadLine();
