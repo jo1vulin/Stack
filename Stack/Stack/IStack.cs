@@ -18,9 +18,6 @@ namespace Stack
         //Print all elements from stack
         List<T> printAllElements();
 
-        //Get length of stack
-        int getLength();
-
         //Add element to stack
         void addElement(T element);
 
@@ -29,5 +26,6 @@ namespace Stack
 
         //Expose getter in interface
         int Length { get; }
+
     }
 }

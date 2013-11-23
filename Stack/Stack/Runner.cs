@@ -24,7 +24,7 @@ namespace Stack
             {
                 Console.WriteLine("View last added element " + stack.viewElement());
                 Console.WriteLine("Remove last added element " + stack.removeElement());
-                Console.WriteLine("New length is " + stack.getLength());
+                Console.WriteLine("New length is " + stack.Length);
 
             }
 
@@ -48,33 +48,28 @@ namespace Stack
 
             // test clear stack
             stack.clearStack();
-            Console.WriteLine("Stack: " + stack.getLength());
+            Console.WriteLine("Stack: " + stack.Length);
             var item = stack.printAllElements();
             foreach (var i in item)
             {
                 Console.WriteLine(i);
             }
-            Console.WriteLine("Stack: " + stack.printAllElements());
+            
             
             stack.addElement(12);
-            Console.WriteLine(stack.getLength());
+            Console.WriteLine(stack.Length);
             Console.WriteLine(stack.viewElement());
 
             for (int i = 1; i <= 50; i++)
             {
                 Console.WriteLine("Add element " + i);
                 stack.addElement(i);
-                Console.WriteLine("New length is: " + stack.getLength());
+                Console.WriteLine("New length is: " + stack.Length);
 
             }
 
-            
-            
-
             Console.WriteLine("Press any key to continue ...");
             Console.ReadLine();
-
-
 
         }
     }

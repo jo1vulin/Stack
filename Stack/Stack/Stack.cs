@@ -114,5 +114,14 @@ namespace Stack
             Elements = newElements;
         }
 
+        public void addToFront(T element)
+        {
+            Capacity++;
+            T[] newElements = new T[Capacity];
+            newElements[0] = element;
+            Array.Copy(Elements, 0, newElements, 1, Length);
+            Elements = newElements;
+        }
+
     }
 }
