@@ -26,5 +26,8 @@ namespace Stack
 
         //Clear stack
         void clearStack();
+
+        //Expose getter in interface
+        int Length { get; }
     }
 }

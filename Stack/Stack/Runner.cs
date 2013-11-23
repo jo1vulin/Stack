@@ -16,7 +16,7 @@ namespace Stack
             {
                 Console.WriteLine("Add element " + i);
                 stack.addElement(i);
-                Console.WriteLine("New length is: " + stack.getLength());
+                Console.WriteLine("New length is: " + stack.Length);
 
             }
 

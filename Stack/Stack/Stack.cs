@@ -93,10 +93,11 @@ namespace Stack
             return newList;
         }
 
-        public int getLength()
-        {
-            return Length;
-        }
+        //Not needed since I exposed getter in iterface
+        //public int getLength()
+        //{
+        //    return Length;
+        //}
 
         public void clearStack()
         {
